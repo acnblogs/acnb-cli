@@ -5,10 +5,10 @@ const figlet = require('figlet')
 const chalk = require('chalk')
 
 program
-  .command('create <theme-name>')
-  .description('create a new theme')
+  .command('init <theme-name>')
+  .description('init a new theme')
   .option('-f, --force', 'overwrite target directory if it exist')
-  .action((name, options) => require('../lib/create.js')(name, options))
+  .action((name, options) => require('../lib/init.js')(name, options))
 
 program
   .version(`v${require('../package.json').version}`)
